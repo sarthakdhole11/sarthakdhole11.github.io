@@ -19,17 +19,25 @@
         nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 10px;
-            background: rgba(75, 0, 130, 0.2); /* Subtle purple for contrast */
+            gap: 20px; /* Adjusted spacing */
+            padding: 8px; /* Reduced padding */
+            background: rgba(0, 0, 0, 0.5); /* Dark translucent background */
+            backdrop-filter: blur(10px); /* Glass effect */
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         nav a {
-            color: #333;
+            color: #fff; /* White for good contrast */
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.1em; /* Slightly reduced font size */
+            font-weight: bold;
+            padding: 5px 15px; /* Reduced padding inside the links */
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            background: rgba(255, 255, 255, 0.3); /* Hover effect */
+            color: #000; /* Contrast color on hover */
         }
         .content {
             display: flex;
@@ -84,6 +92,15 @@
             background: #d8bfd8; /* Matching light purple footer */
             color: #333;
         }
+        .social-links {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.2); /* Translucent white */
+            border-radius: 15px;
+            backdrop-filter: blur(10px); /* Glass effect */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
         .social-links a {
             margin: 0 10px;
             color: #333;
@@ -100,7 +117,7 @@
         <a href="index.html">Home</a>
         <a href="writings.html">Writings</a>
         <a href="projects.html">Projects</a>
-        <a href="resume.pdf" target="_blank">Resume</a> <!-- Added Resume link -->
+        <a href="resume.html">Resume</a> <!-- Updated link to point to resume.html -->
     </nav>
     <div class="content">
         <img src="images/profile.jpeg" alt="Profile Image" class="profile"> <!-- Updated profile image to JPEG -->
@@ -121,9 +138,8 @@
             <a href="https://www.instagram.com/sarthakdhole11/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/SarthakDhole11" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="mailto:dholesarthak11@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.admonymous.co/sarthakd" target="_blank"><i class="fas fa-comment"></i></a> <!-- Added Admonymous link -->
+            <a href="https://www.admonymous.co/sarthakd" target="_blank"><i class="fas fa-comment"></i></a>
         </div>
     </footer>
 </body>
 </html>
-

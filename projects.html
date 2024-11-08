@@ -5,56 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles/style.css">
     <style>
-        body {
-            background: url('images/background.jpg') no-repeat center center fixed;
-            background-size: cover;
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: 'Arial', sans-serif;
             color: #333;
+            background: url('images/background.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover;
         }
-        header, footer {
-            background: rgba(75, 0, 130, 0.2);
-            text-align: center;
-            padding: 10px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
+        nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 20px; /* Adjusted spacing */
+            padding: 8px; /* Reduced padding */
+            background: rgba(0, 0, 0, 0.5); /* Dark translucent background */
+            backdrop-filter: blur(10px); /* Glass effect */
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         nav a {
+            color: #fff; /* White for good contrast */
             text-decoration: none;
-            color: #333;
-            font-size: 1.2em;
+            font-size: 1.1em; /* Slightly reduced font size */
+            font-weight: bold;
+            padding: 5px 15px; /* Reduced padding inside the links */
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            background: rgba(255, 255, 255, 0.3); /* Hover effect */
+            color: #000; /* Contrast color on hover */
+        }
+        main {
+            text-align: center;
+            padding: 20px;
         }
         footer {
-            background: #d8bfd8;
+            text-align: center;
+            padding: 10px;
+            background: #d8bfd8; /* Matching light purple footer */
             color: #333;
+        }
+        .social-links {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.2); /* Translucent white */
+            border-radius: 15px;
+            backdrop-filter: blur(10px); /* Glass effect */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        .social-links a:hover {
+            color: #4b0082;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="writings.html">Writings</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.pdf" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="writings.html">Writings</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+    </nav>
     <main>
         <h1>My Projects</h1>
-        <h1>- are under construction!</h1>
+        <h2>- are under construction!</h2>
         <p>Here are some of the projects I have worked on:</p>
-        <ul>
+      
             <li>Project Title 1 - <a href="https://example.com/project1" target="_blank">View Project</a></li>
             <li>Project Title 2 - <a href="https://example.com/project2" target="_blank">View Project</a></li>
             <li>Project Title 3 - <a href="https://example.com/project3" target="_blank">View Project</a></li>
@@ -62,6 +87,14 @@
     </main>
     <footer>
         <p>&copy; 2024 Sarthak Dhole. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/sarthakdhole11" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sarthak-dhole-12a1b52b4/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sarthakdhole11/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/SarthakDhole11" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:dholesarthak11@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.admonymous.co/sarthakd" target="_blank"><i class="fas fa-comment"></i></a>
+        </div>
     </footer>
 </body>
 </html>
