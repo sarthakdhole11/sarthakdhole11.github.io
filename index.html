@@ -1,29 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthak Dhole - Student • Innovator</title>
+    <!-- Include simplified Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: url('images/background.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            background: rgba(75, 0, 130, 0.2); /* Subtle purple for contrast */
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+            text-align: center;
+            padding: 20px;
+        }
+        .content img.profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #333;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .intro h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #333; /* Original color */
+        }
+        .intro p {
+            font-size: 2em; /* Increased size */
+            margin: 10px 0;
+        }
+        .intro .student {
+            color: #ffffff; /* Bright white for better visibility */
+            font-weight: bold;
+        }
+        .intro .sun-emoji {
+            font-size: 1.2em; /* Smaller size for better visual balance */
+            vertical-align: middle;
+        }
+        .intro .innovator {
+            background: linear-gradient(90deg, #32CD32, #FFA07A, #FFD700); /* Light green to light orange to gold */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold; /* Added to make it vibrant */
+            animation: sparkle 2s infinite linear;
+        }
+        @keyframes sparkle {
+            0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; }
+            50% { text-shadow: 0 0 15px #FFD700, 0 0 20px #FFA07A; }
+            100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; }
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #d8bfd8; /* Matching light purple footer */
+            color: #333;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        .social-links a:hover {
+            color: #4b0082;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="writings.html">Writings</a></li>
-                <li><a href="pdf/resume.pdf" target="_blank">My Resume (PDF)</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome to My Personal Website</h1>
-        <p>I am steered by a profound curiosity that spans physics, biology, and philosophy, each adding unique perspectives to my understanding of the world. Psychoanalysis and Linguistics intrigue me because of their ties to Philosophy while Economics captivates me as it gives me a chance to sharpen my decision-making skills. My passion for Ethology stems from the ability to study animal behavior free from stereotypes, revealing patterns that inform broader social and economic insights. I seek to bridge diverse knowledge areas, aiming to contribute meaningfully to both scientific progress and societal growth through collaborative inquiry and innovative exploration.</p>
-        <p><a href="writings.html">Go to Writings Page</a></p>
-        <p><a href="pdf/resume.pdf" target="_blank">View My Resume (PDF)</a></p>
-    </main>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="writings.html">Writings</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.pdf" target="_blank">Resume</a> <!-- Added Resume link -->
+    </nav>
+    <div class="content">
+        <img src="images/profile.jpeg" alt="Profile Image" class="profile"> <!-- Updated profile image to JPEG -->
+        <div class="intro">
+            <h1>Hi! I'm Sarthak Dhole</h1>
+            <p>
+                <span class="student">Student</span> 
+                <span class="sun-emoji">🌞</span> <!-- Sun emoji added with smaller size -->
+                <span class="innovator">Innovator</span>
+            </p>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2024 Sarthak Dhole. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/sarthakdhole11" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sarthak-dhole-12a1b52b4/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sarthakdhole11/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/SarthakDhole11" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:dholesarthak11@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.admonymous.co/sarthakd" target="_blank"><i class="fas fa-comment"></i></a> <!-- Added Admonymous link -->
+        </div>
     </footer>
 </body>
 </html>
+
