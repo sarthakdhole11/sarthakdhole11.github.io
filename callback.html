@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            font-family: 'Bodoni 72 Oldstyle', serif;
+        }
+        .container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 3em;
+            color: #8F25AA; /* Matching color for both text and social links */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(143, 37, 170, 0.3), 0 0 10px rgba(143, 37, 170, 0.2); /* Subtle shadow */
+        }
+        .meme {
+            width: 90%; /* Larger size */
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .credit {
+            margin-top: 10px;
+            font-size: 0.9em;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .credit a {
+            color: #333;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            width: 100%;
+            padding: 10px;
+            background: #d8bfd8; /* Light purple for footer */
+            color: #333;
+            font-family: 'Bodoni 72 Oldstyle', serif;
+        }
+        .social-links {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.2); /* Translucent white */
+            border-radius: 15px;
+            backdrop-filter: blur(10px); /* Glass effect */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #8F25AA; /* Matching color for aesthetics */
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-links a:hover {
+            color: #4b0082;
+            transform: scale(1.1);
+        }
+        .back-to-home {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+        .back-to-home:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="message">We're having issues :(</p>
+        <img id="memeImage" alt="Meme" class="meme">
+        <div id="creditSection" class="credit" style="display: none;">
+            <!-- Placeholder for credit text -->
+        </div>
+    </div>
+    
+    <a href="index.html" class="back-to-home">Back to Home</a>
+    
+    <footer>
+        <p>&copy; 2024 Sarthak Dhole. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/sarthakdhole11" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sarthak-dhole-12a1b52b4/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sarthakdhole11/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/SarthakDhole11" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:dholesarthak11@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.admonymous.co/sarthakd" target="_blank"><i class="fas fa-comment"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Array of meme images located in the 'memes' folder with correct file types
+        const memes = ['memes/meme1.jpg', 'memes/meme2.jpg', 'memes/meme3.gif'];
+
+        // Function to select a random meme
+        function getRandomMeme() {
+            const randomIndex = Math.floor(Math.random() * memes.length);
+            return memes[randomIndex];
+        }
+
+        // Display a random meme on page load
+        const selectedMeme = getRandomMeme();
+        document.getElementById('memeImage').src = selectedMeme;
+
+        // Display credit if meme2 or meme3 is shown
+        const creditSection = document.getElementById('creditSection');
+        if (selectedMeme === 'memes/meme2.jpg') {
+            creditSection.style.display = 'block';
+            creditSection.innerHTML = 'Credit: <a href="https://www.facebook.com/share/14wgzDTccb/?mibextid=WC7FNe" target="_blank">Engineering Memes Guy at UNAM Universidad Nacional Autónoma de México</a>';
+        } else if (selectedMeme === 'memes/meme3.gif') {
+            creditSection.style.display = 'block';
+            creditSection.innerHTML = 'Credit: <a href="https://tenor.com/bS14o.gif" target="_blank">purenoiserecords on Tenor</a>';
+        }
+    </script>
+</body>
+</html>
