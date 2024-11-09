@@ -111,6 +111,41 @@
         .social-links a:hover {
             color: #4b0082;
         }
+        .music-embed-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 120px; /* Adjusted size */
+            height: 120px; /* Adjusted size */
+            transition: width 0.3s ease, height 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .music-embed-container img {
+            width: 70px; /* Logo size */
+        }
+        .music-embed-container:hover {
+            width: 300px; /* Reduced expanded width */
+            height: 300px; /* Reduced expanded height */
+            border-radius: 20px;
+        }
+        .music-embed-container iframe {
+            display: none; /* Hidden by default */
+        }
+        .music-embed-container:hover iframe {
+            display: block; /* Show the iframe when expanded */
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .music-embed-container:hover img {
+            display: none; /* Hide the logo when expanded */
+        }
     </style>
 </head>
 <body>
@@ -118,19 +153,26 @@
         <a href="index.html">Home</a>
         <a href="writings.html">Writings</a>
         <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a> <!-- Updated link to point to resume.html -->
+        <a href="resume.html">Resume</a>
     </nav>
     <div class="content">
-        <img src="images/profile.jpeg" alt="Profile Image" class="profile"> <!-- Updated profile image to JPEG -->
+        <img src="images/profile.jpeg" alt="Profile Image" class="profile">
         <div class="intro">
             <h1>Hi! I'm Sarthak Dhole</h1>
             <p>
                 <span class="student">Student</span> 
-                <span class="sun-emoji">🌞</span> <!-- Sun emoji added with smaller size -->
+                <span class="sun-emoji">🌞</span>
                 <span class="innovator">Innovator</span>
             </p>
         </div>
     </div>
+
+    <!-- Apple Music Embed Container -->
+    <div class="music-embed-container">
+        <img src="images/apple-music-logo.png" alt="Apple Music Logo"> <!-- Add your logo image here -->
+        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/in/playlist/thinkin/pl.u-BNA6rKJte4x2Gj0"></iframe>
+    </div>
+
     <footer>
         <p>&copy; 2024 Sarthak Dhole. All rights reserved.</p>
         <div class="social-links">
@@ -141,55 +183,6 @@
             <a href="mailto:dholesarthak11@gmail.com"><i class="fas fa-envelope"></i></a>
             <a href="https://www.admonymous.co/sarthakd" target="_blank"><i class="fas fa-comment"></i></a>
         </div>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarthak's Apple Music Embed</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .music-embed-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 100px; /* Small size */
-            height: 100px; /* Small size */
-            transition: width 0.3s ease, height 0.3s ease;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .music-embed-container:hover {
-            width: 400px; /* Expanded size */
-            height: 400px; /* Expanded size */
-            border-radius: 20px;
-        }
-
-        .music-embed-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Apple Music Embed Container -->
-    <div class="music-embed-container">
-        <iframe allow="autoplay *; encrypted-media *;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.music.apple.com/profile/sarthakdhole"></iframe>
-    </div>
-
-</body>
-</html>
     </footer>
 </body>
 </html>
