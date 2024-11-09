@@ -8,7 +8,7 @@
     <style>
         @font-face {
             font-family: 'Cochocib Script Latin Pro';
-            src: url('fonts/Cochocib-Script-Latin-Pro.ttf'); /* Replace this path with your actual font path */
+            src: url('fonts/Cochocib-Script-Latin-Pro.ttf'); 
         }
         body, html {
             margin: 0;
@@ -16,8 +16,7 @@
             height: 100%;
             font-family: 'Arial', sans-serif;
             color: #333;
-            background: url('images/background.jpg') no-repeat center center fixed; /* Background image */
-            background-size: cover;
+            background: url('images/background.jpg') no-repeat center center fixed;             background-size: cover;
         }
         nav {
             display: flex;
@@ -182,6 +181,33 @@
             </p>
         </div>
     </div>
+    <p class="bildungsroman-section">
+    Welcome to my <span class="bildungsroman-gradient">Bildungsroman!</span>
+</p>
+
+<style>
+    @font-face {
+        font-family: 'Edwardian Script ITC';
+        src: url('fonts/EdwardianScriptITC.ttf'); /* Ensure this path matches your font file */
+    }
+
+    .bildungsroman-section {
+        position: absolute;
+        top: 13%; /* Adjust this value to position it appropriately */
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Edwardian Script ITC', cursive;
+        font-size: 2.2em;
+        color: #ffffff; 
+        font-weight: bold;
+        white-space: nowrap;         z-index: 2;    }
+
+    .bildungsroman-gradient {
+        background: linear-gradient(90deg, #D21F3C, #FFEC8B); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
 
     <!-- Apple Music Embed Container -->
     <div class="music-embed-container">
