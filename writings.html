@@ -6,6 +6,10 @@
     <title>My Writings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
+        @font-face {
+            font-family: 'Cochocib Script Latin Pro';
+            src: url('fonts/Cochocib-Script-Latin-Pro.ttf'); /* Replace this path with your actual font path */
+        }
         body, html {
             margin: 0;
             padding: 0;
@@ -18,8 +22,9 @@
         nav {
             display: flex;
             justify-content: center;
+            align-items: center; /* Aligns items vertically */
             gap: 20px; /* Adjusted spacing */
-            padding: 8px; /* Reduced padding */
+            padding: 5px; /* Reduced padding */
             background: rgba(0, 0, 0, 0.5); /* Dark translucent background */
             backdrop-filter: blur(10px); /* Glass effect */
             border-bottom: 2px solid rgba(255, 255, 255, 0.2);
@@ -28,15 +33,21 @@
         nav a {
             color: #fff; /* White for good contrast */
             text-decoration: none;
-            font-size: 1.1em; /* Slightly reduced font size */
+            font-size: 1em; /* Consistent font size */
             font-weight: bold;
-            padding: 5px 15px; /* Reduced padding inside the links */
+            padding: 5px 10px; /* Reduced padding inside the links */
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
             background: rgba(255, 255, 255, 0.3); /* Hover effect */
             color: #000; /* Contrast color on hover */
+        }
+        nav .moments {
+            font-family: 'Cochocib Script Latin Pro', cursive;
+            color: #FFD700; /* Golden color */
+            font-weight: bold;
+            font-size: 1em; /* Matches the size of other links */
         }
         main {
             text-align: center;
@@ -75,12 +86,13 @@
         <a href="writings.html">Writings</a>
         <a href="projects.html">Projects</a>
         <a href="resume.html">Resume</a>
+        <a href="moments.html" class="moments">Moments</a> <!-- "Moments" link added -->
     </nav>
     <main>
         <h1>My Writings</h1>
         <h2>- are under construction!</h2>
         <p>Here are some of my writings:</p>
-       
+
             <li><a href="https://example.com/article1" target="_blank">Article Title 1</a></li>
             <li><a href="https://example.com/article2" target="_blank">Article Title 2</a></li>
             <li><a href="https://example.com/article3" target="_blank">Article Title 3</a></li>
