@@ -11,6 +11,14 @@
             font-family: 'Cochocib Script Latin Pro';
             src: url('fonts/Cochocib-Script-Latin-Pro.ttf'); /* Replace this path with your actual font path */
         }
+        @font-face {
+            font-family: 'Bodoni 72 Oldstyle';
+            src: url('fonts/Bodoni72Oldstyle.ttf'); 
+        }
+        @font-face {
+            font-family: 'Garamond';
+            src: url('fonts/Garamond.ttf'); /* Replace with actual font path */
+        }
         body, html {
             margin: 0;
             padding: 0;
@@ -23,32 +31,32 @@
         nav {
             display: flex;
             justify-content: center;
-            align-items: center; /* Aligns items vertically */
-            gap: 20px; /* Adjusted spacing */
-            padding: 5px; /* Reduced padding */
-            background: rgba(0, 0, 0, 0.5); /* Dark translucent background */
-            backdrop-filter: blur(10px); /* Glass effect */
+            align-items: center;
+            gap: 20px;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
             border-bottom: 2px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         nav a {
-            color: #fff; /* White for good contrast */
+            color: #fff;
             text-decoration: none;
-            font-size: 1em; /* Consistent font size */
+            font-size: 1em;
             font-weight: bold;
-            padding: 5px 10px; /* Reduced padding inside the links */
+            padding: 5px 10px;
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
-            background: rgba(255, 255, 255, 0.3); /* Hover effect */
-            color: #000; /* Contrast color on hover */
+            background: rgba(255, 255, 255, 0.3);
+            color: #000;
         }
         nav .moments {
             font-family: 'Cochocib Script Latin Pro', cursive;
-            color: #FFD700; /* Golden color */
+            color: #FFD700;
             font-weight: bold;
-            font-size: 1em; /* Matches the size of other links */
+            font-size: 1em;
         }
         main {
             text-align: center;
@@ -57,18 +65,18 @@
         footer {
             text-align: center;
             padding: 10px;
-            background: #d8bfd8; /* Matching light purple footer */
+            background: #d8bfd8;
             color: #333;
-            font-family: 'Bodoni 72 Oldstyle', serif; /* Updated font */
+            font-family: 'Bodoni 72 Oldstyle', serif;
         }
         .social-links {
             display: inline-block;
             padding: 10px;
             margin-top: 10px;
-            background: rgba(255, 255, 255, 0.2); /* Translucent white */
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
-            backdrop-filter: blur(10px); /* Glass effect */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .social-links a {
             margin: 0 10px;
@@ -79,6 +87,53 @@
         .social-links a:hover {
             color: #4b0082;
         }
+        .frosted-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(11px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .frosted-container h3 {
+            font-family: 'Bodoni 72 Oldstyle', serif;
+            font-size: 1.5em;
+            color: #4b0082;
+            margin-bottom: 10px;
+        }
+        .writings-table, .memesletters-table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        .writings-table td, .memesletters-table td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        .writings-table td.title, .memesletters-table td.title {
+            font-family: 'Garamond', serif;
+            text-align: left;
+        }
+        .writings-table td.date, .memesletters-table td.date {
+            font-family: 'Bodoni 72 Oldstyle', serif;
+            font-size: 0.8em;
+            color: #666;
+            text-align: right;
+        }
+        .memesletters-caption {
+            font-family: 'Garamond', serif;
+            font-size: 0.9em;
+            color: #563600;
+            margin-bottom: -10px;
+        }
+        .memesletters-subcaption {
+            font-family: 'Garamond', serif;
+            font-size: 0.8em;
+            color: ##B8B8B8;
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -86,18 +141,49 @@
         <a href="index.html">Home</a>
         <a href="writings.html">Writings</a>
         <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="moments.html" class="moments">Moments</a> <!-- "Moments" link added -->
+        <a href="resume.html">Resumé</a>
+        <a href="moments.html" class="moments">Moments</a>
     </nav>
     <main>
         <h1>My Writings</h1>
-        <h2>- are under construction!</h2>
-        <p>Here are some of my writings:</p>
+        <h2></h2>
+        <div class="frosted-container">
+            <h3>Academic Writings</h3>
+            <table class="writings-table">
+                <tr>
+                    <td class="title"><a href="https://sarthakdhole.com/notion-of-freedom" target="_blank">Zygmunt Bauman and the notion of meaningful Freedom: A Philosophical Investigation</a></td>
+                    <td class="date">23 October, 2024</td>
+                </tr>
+                <tr>
+                    <td class="title"><a href="https://example.com/article2" target="_blank"></a></td>
+                    <td class="date"></td>
+                </tr>
+                <tr>
+                    <td class="title"><a href="https://example.com/article3" target="_blank"></a></td>
+                    <td class="date"></td>
+                </tr>
+            </table>
+        </div>
 
-            <li><a href="https://example.com/article1" target="_blank">Article Title 1</a></li>
-            <li><a href="https://example.com/article2" target="_blank">Article Title 2</a></li>
-            <li><a href="https://example.com/article3" target="_blank">Article Title 3</a></li>
-        </ul>
+        <div class="frosted-container memesletters-section">
+            <h3>Memesletters</h3>
+            <p class="memesletters-caption">Explaining jargon-filled academia with pop culture memes in a digestible manner! 
+         <p class="memesletters-subcaption">I authored these articles for The Philosophers' Shirt and the following links redirect to their blog.</p>
+            <table class="memesletters-table">
+                <tr>
+                    <td class="title"><a href="https://the-philosophers-shirt.com/blogs/philosophical-dictionary/descartes-philosophical-revolution-on-mind-body-dualis?srsltid=AfmBOoo096Fna-elKmW_ok8H8YGi7Rsz9xbJqUm1v47d-AXgDpPCjBp4" target="_blank">Descartes' Philosophical Revolution on Mind-Body Dualism</a></td>
+                    <td class="date">27 August, 2024</td>
+                </tr>
+                <tr>
+                    <td class="title"><a href="https://the-philosophers-shirt.com/blogs/philosophical-dictionary/beyond-capitalist-realism-the-need-for-a-philosophy-of-life" target="_blank">Beyond Capitalist Realism: The need for a Philosophy of Life</a></td>
+                    <td class="date">24 September, 2024</td>
+                </tr>
+                <tr>
+                    <td class="title"><a href="https://example.com/memesletter3" target="_blank"></a></td>
+                    <td class="date"></td>
+                </tr>
+            </table>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Sarthak Dhole. All rights reserved.</p>
@@ -106,9 +192,4 @@
             <a href="https://www.linkedin.com/in/sarthak-dhole-12a1b52b4/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/sarthakdhole11/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/SarthakDhole11" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:dholesarthak11@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.admonymous.co/sarthakd" target="_blank"><i class="fas fa-comment"></i></a>
-        </div>
-    </footer>
-</body>
-</html>
+            <a
