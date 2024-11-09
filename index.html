@@ -161,6 +161,13 @@
         .music-embed-container:hover img, .spotify-embed-container:hover img {
             display: none;
         }
+        .calendly-badge-widget {
+            position: fixed !important;
+            bottom: 110px !important; /* Adjust to place it right above the footer */
+            left: 56% !important;
+            transform: translateX(-50%) !important;
+            z-index: 20 !important; /* Ensure it stays on top */
+        }
     </style>
 </head>
 <body>
@@ -185,7 +192,6 @@
     <p class="bildungsroman-section">
     Welcome to my <span class="bildungsroman-gradient">bildungsroman!</span>
 </p>
-
 <style>
     @font-face {
         font-family: 'Edwardian Script ITC';
@@ -220,7 +226,31 @@
         <img src="images/spotify-logo.png" alt="Spotify Logo"> 
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0HP0SvcKrjMJlP9RKBTwVH?utm_source=generator&theme=0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>   
-        
+    <!-- Calendly badge widget begin -->
+    <div class="calendly-widget-container">
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script type="text/javascript">
+            window.onload = function() {
+                Calendly.initBadgeWidget({
+                    url: 'https://calendly.com/dholesarthak11/1-1',
+                    text: 'Schedule time with me',
+                    color: '#0069ff',
+                    textColor: '#ffffff'
+                });
+
+                // JavaScript to move the widget up when scrolling
+                window.addEventListener('scroll', function() {
+                    const widget = document.querySelector('.calendly-badge-widget');
+                    if (widget) {
+                        const scrollOffset = window.scrollY;
+                        widget.style.bottom = (60 + scrollOffset) + 'px';
+                    }
+                });
+            };
+        </script>
+    </div>
+    <!-- Calendly badge widget end -->
     <footer>
         <p>&copy; 2024 Sarthak Dhole. All rights reserved.</p>
         <div class="social-links">
