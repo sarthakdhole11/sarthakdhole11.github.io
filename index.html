@@ -170,39 +170,55 @@
         }
         #thought-bubble {
     position: absolute;
-    top: 200px; /* Adjust this to position above and to the right of the profile image */
-    left: 45%; /* Adjust as needed */
-    background-color: #ffffff;
+    top: 5%; /* Default position for larger screens */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
     border-radius: 20px;
-    padding: 10px 15px;
-    border: 2px solid #333;
-    width: 250px; /* Adjust width as needed */
+    padding: 15px 20px;
+    width: auto;
+    max-width: 80%; /* Cap width for smaller devices */
     text-align: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     font-family: 'Comic Sans MS', sans-serif;
-    font-size: 1em;
-    z-index: 3;
-    animation: float 3s infinite alternate;
+    font-size: 1rem;
+    z-index: 10; /* Keep above other content */
+    animation: float 2.5s infinite alternate ease-in-out; /* Hover effect */
 }
-#thought-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -15px; /* Adjust this to align the tail */
-    left: 30px; /* Adjust to position the tail correctly */
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: #ffffff; /* Match the background color of the bubble */
-    border-bottom: 0;
-    margin-left: -10px;
+
+/* Hover effect for interactivity */
+#thought-bubble:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transform: translateX(-50%) translateY(-5px) scale(1.05); /* Slight zoom on hover */
 }
+
+/* Float animation */
 @keyframes float {
-    from { transform: translate(0, 0); }
-    to { transform: translate(0, -10px); }
+    from { transform: translateX(-50%) translateY(0); }
+    to { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #thought-bubble {
+        top: 15%; /* More space for smaller screens */
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #thought-bubble {
+        top: 20%; /* Ensure complete separation from profile image */
+        font-size: 0.8rem;
+    }
 }
 
 #thought-text {
     color: #333;
+    max-width: 250px; /* Ensures the text doesn’t overflow */
+    word-wrap: break-word;
 }    </style>
 </head>
 <body>
@@ -213,20 +229,22 @@
         <a href="resume.html">Résumé</a>
         <a href="moments.html" class="moments">Moments</a>
     </nav>
-    <div class="content">
-        <div id="thought-bubble">
-            <span id="thought-text">Watching the last of Žižek's films...</span>
-        </div>
-    <img src="images/profile.jpeg" alt="Profile Image" class="profile">
-    <div class="intro">
-        <h1>Hey! I'm Sarthak Dhole</h1>
-        <p>
-            <span class="student">Student</span> 
-            <span class="sun-emoji">🌞</span>
-            <span class="innovator">Innovator</span>
-        </p>
+
+    <div id="thought-bubble">
+        <span id="thought-text">Watching the last of Žižek's films...</span>
     </div>
-</div>
+
+    <div class="content">
+        <img src="images/profile.jpeg" alt="Profile Image" class="profile">
+        <div class="intro">
+            <h1>Hey! I'm Sarthak Dhole</h1>
+            <p>
+                <span class="student">Student</span>
+                <span class="sun-emoji">🌞</span>
+                <span class="innovator">Innovator</span>
+            </p>
+        </div>
+    </div>
     <p class="bildungsroman-section">
     Welcome to my <span class="bildungsroman-gradient">bildungsroman!</span>
 </p>
