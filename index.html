@@ -20,34 +20,25 @@
             background: url('images/background.jpg') no-repeat center center fixed;             background-size: cover;
         }
         nav {
-    display: flex;
-    flex-wrap: wrap; /* Allow links to wrap */
-    justify-content: center;
-    align-items: center;
-    gap: 8px; /* Adjust spacing between links */
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 8px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-}
-
-@media (max-width: 768px) {
-    nav a {
-        font-size: 0.9rem; /* Reduce font size for smaller devices */
-        padding: 3px 6px; /* Adjust padding */
-    }
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
         nav a:hover {
             background: rgba(255, 255, 255, 0.3);
             color: #000;
@@ -177,24 +168,16 @@ nav a {
         .music-embed-container:hover img, .spotify-embed-container:hover img {
             display: none;
         }
-        .calendly-widget-container {
-    position: fixed !important;
-    bottom: 20px !important; /* Align near the bottom */
-    left: 50% !important;
-    transform: translateX(-50%) !important; /* Center horizontally */
-    z-index: 20 !important;
-}
-
-.calendly-badge-widget {
-    border-radius: 10px !important;
-    padding: 10px 20px !important; /* Adjust padding */
-    font-size: 0.9em !important; /* Reduce font size */
-    background: #0069ff !important; /* Ensure proper color contrast */
-    text-align: center;
-}
+        .calendly-badge-widget {
+            position: fixed !important;
+            bottom: 110px !important; /* Adjust to place it right above the footer */
+            left: 61.25% !important;
+            transform: translateX(-50%) !important;
+            z-index: 20 !important; /* Ensure it stays on top */
+        }
 #thought-bubble {
     position: absolute;
-    top: 20%; /* Adjusted for larger screens */
+    top: 25%; /* Adjusted for larger screens */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.9);
