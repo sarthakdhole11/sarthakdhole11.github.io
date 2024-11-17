@@ -168,7 +168,34 @@
             transform: translateX(-50%) !important;
             z-index: 20 !important; /* Ensure it stays on top */
         }
-
+        #thought-bubble {
+    position: absolute;
+    top: 200px; /* Adjust this to position above and to the right of the profile image */
+    left: 45%; /* Adjust as needed */
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 2px solid #333;
+    width: 250px; /* Adjust width as needed */
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 1em;
+    z-index: 3;
+    animation: float 3s infinite alternate;
+}
+#thought-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Adjust this to align the tail */
+    left: 30px; /* Adjust to position the tail correctly */
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ffffff; /* Match the background color of the bubble */
+    border-bottom: 0;
+    margin-left: -10px;
+}
 @keyframes float {
     from { transform: translate(0, 0); }
     to { transform: translate(0, -10px); }
@@ -186,6 +213,10 @@
         <a href="resume.html">Résumé</a>
         <a href="moments.html" class="moments">Moments</a>
     </nav>
+    <div class="content">
+        <div id="thought-bubble">
+            <span id="thought-text">Watching the last of Žižek's films...</span>
+        </div>
     <img src="images/profile.jpeg" alt="Profile Image" class="profile">
     <div class="intro">
         <h1>Hey! I'm Sarthak Dhole</h1>
