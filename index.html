@@ -131,12 +131,12 @@
         .music-embed-container, .spotify-embed-container {
             position: fixed;
             bottom: 20px;
-            width: 70px;
-            height: 70px;
+            width: 90px;
+            height: 90px;
             transition: width 0.3s ease, height 0.3s ease;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             background: #fff;
             display: flex;
             justify-content: center;
@@ -152,8 +152,8 @@
             width: 50px;
         }
         .music-embed-container:hover, .spotify-embed-container:hover {
-            width: 250px;
-            height: 300px;
+            width: 300px;
+            height: 352px;
             border-radius: 20px;
         }
         .music-embed-container iframe, .spotify-embed-container iframe {
@@ -177,7 +177,7 @@
         }
 #thought-bubble {
     position: absolute;
-    top: 25%; /* Adjusted for larger screens */
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.9);
@@ -195,26 +195,24 @@
 
 @media (max-width: 768px) {
     #thought-bubble {
-        top: 30%; /* Push further down for medium screens */
+        top: 35%; 
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     #thought-bubble {
-        top: 35%; /* Push even further for small screens */
+        top: 40%;
         font-size: 0.8rem;
     }
 }
 
-/* Hover effect for interactivity */
 #thought-bubble:hover {
     background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
     transform: translateX(-50%) translateY(-5px) scale(1.05); /* Slight zoom on hover */
 }
 
-/* Float animation */
 @keyframes float {
     from { transform: translateX(-50%) translateY(0); }
     to { transform: translateX(-50%) translateY(-5px); }
@@ -223,7 +221,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     #thought-bubble {
-        top: 15%; /* More space for smaller screens */
+        top: 15%;
         font-size: 0.9rem;
         padding: 10px 15px;
     }
@@ -231,14 +229,14 @@
 
 @media (max-width: 480px) {
     #thought-bubble {
-        top: 20%; /* Ensure complete separation from profile image */
+        top: 20%; 
         font-size: 0.8rem;
     }
 }
 
 #thought-text {
     color: #333;
-    max-width: 250px; /* Ensures the text doesn’t overflow */
+    max-width: 250px;
     word-wrap: break-word;
 }    </style>
 </head>
@@ -296,7 +294,7 @@
    <!-- Apple Music Embed Container -->
     <div class="music-embed-container">
         <img src="images/apple-music-logo.png" alt="Apple Music Logo">
-        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/in/playlist/thinkin/pl.u-BNA6rKJte4x2Gj0"></iframe>
+        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/in/playlist/mein-bildungsroman/pl.u-Ymb00p0iglBL7ye"></iframe>
     </div>
     <!-- Spotify Embed Container -->
     <div class="spotify-embed-container">
