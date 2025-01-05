@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +7,91 @@
     <style>
         body {
             margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f8f8f8; /* Minimalist light gray background */
+            background-color: #f8f8f8; /* Light gray background for a minimalist feel */
             font-family: "Bodoni MT", "Bodoni Old Style", serif;
-            color: #333; /* Neutral dark gray text */
+            color: #333;
+            text-align: center;
         }
         h1 {
-            font-size: 5rem; /* Large text */
+            font-size: 5rem;
             margin: 0;
+            color: #FFD700; /* Gold color for the main answer */
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #444;
+            margin: 0 0 20px 0;
+            text-transform: lowercase;
         }
         p {
             font-size: 1.2rem;
-            margin-top: 2rem;
-            color: #666; /* Slightly lighter text for the timer */
+            margin: 10px 0;
+            color: #666;
+        }
+        .instagram-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .instagram-section a {
+            text-decoration: none;
+            color: #FFD700;
+            font-size: 1.2rem;
+            font-family: 'Bodoni 72 Oldstyle', serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .footer-nav {
+            position: fixed;
+            bottom: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .footer-nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-family: 'Arial', sans-serif;
+        }
+        .footer-nav a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- Question -->
+    <h2>am I in europe today?</h2>
+
     <!-- Answer -->
-    <h1>No</h1>
-    <p id="timer">Redirecting in 10 seconds...</p>
+    <h1>no :(</h1>
+    <p id="timer">redirecting in 10 seconds...</p>
+
+    <!-- Instagram Section -->
+    <div class="instagram-section">
+        <p>check out some pics I took while in europe here:</p>
+        <a href="https://instagram.com/sarthaks.heif" target="_blank" rel="noopener noreferrer">
+            @sarthaks.heif
+        </a>
+    </div>
+
+    <!-- Footer Navigation -->
+    <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="writings.html">Writings</a>
+        <a href="projects.html">Projects</a>
+        <a href="moments.html">Moments</a>
+    </div>
 
     <script>
         let countdown = 10;
@@ -40,9 +100,9 @@
         const updateTimer = () => {
             countdown--;
             if (countdown > 0) {
-                timerElement.textContent = `Redirecting in ${countdown} seconds...`;
+                timerElement.textContent = `redirecting in ${countdown} seconds...`;
             } else {
-                timerElement.textContent = "Redirecting now...";
+                timerElement.textContent = "redirecting now...";
                 window.location.href = "https://sarthakdhole.com/index.html";
             }
         };
