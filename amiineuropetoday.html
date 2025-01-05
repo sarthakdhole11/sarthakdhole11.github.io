@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Am I in Europe Today?</title>
+    <title>Am i in Europe Today?</title>
     <style>
         body {
             margin: 0;
@@ -13,7 +13,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f8f8f8; /* Light gray background for a minimalist feel */
+            background-color: #f8f8f8; /* Light gray background */
             font-family: "Bodoni MT", "Bodoni Old Style", serif;
             color: #333;
             text-align: center;
@@ -21,11 +21,11 @@
         h1 {
             font-size: 5rem;
             margin: 0;
-            color: #FFD700; /* Gold color for the main answer */
+            color: #444; /* Muted gray for the answer */
         }
         h2 {
             font-size: 1.5rem;
-            color: #444;
+            color: #666;
             margin: 0 0 20px 0;
             text-transform: lowercase;
         }
@@ -40,11 +40,18 @@
         }
         .instagram-section a {
             text-decoration: none;
-            color: #FFD700;
+            color: #333; /* Neutral dark gray for the Instagram link */
             font-size: 1.2rem;
             font-family: 'Bodoni 72 Oldstyle', serif;
             font-weight: bold;
             font-style: italic;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .instagram-icon {
+            width: 24px;
+            height: 24px;
         }
         .footer-nav {
             position: fixed;
@@ -59,7 +66,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .footer-nav a {
-            color: #FFD700;
+            color: #fff; /* Neutral white for footer links */
             text-decoration: none;
             font-size: 1.1rem;
             font-family: 'Arial', sans-serif;
@@ -71,16 +78,17 @@
 </head>
 <body>
     <!-- Question -->
-    <h2>am I in europe today?</h2>
+    <h2>am i in europe today?</h2>
 
     <!-- Answer -->
-    <h1>no :(</h1>
+    <h1>no</h1>
     <p id="timer">redirecting in 10 seconds...</p>
 
     <!-- Instagram Section -->
     <div class="instagram-section">
-        <p>check out some pics I took while in europe here:</p>
+        <p>check out some pics i took while in europe here:</p>
         <a href="https://instagram.com/sarthaks.heif" target="_blank" rel="noopener noreferrer">
+            <img class="instagram-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
             @sarthaks.heif
         </a>
     </div>
