@@ -9,6 +9,7 @@
         body {
             margin: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
@@ -20,17 +21,34 @@
             font-size: 5rem; /* Large text */
             margin: 0;
         }
+        p {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            color: #666; /* Slightly lighter text for the timer */
+        }
     </style>
 </head>
 <body>
-    <!-- Change "Yes" to "No" as needed -->
-    <h1>Yes</h1>
+    <!-- Answer -->
+    <h1>No</h1>
+    <p id="timer">Redirecting in 10 seconds...</p>
 
     <script>
-        // Redirect to the main page after 5 seconds
-        setTimeout(() => {
-            window.location.href = "https://sarthakdhole.com/index.html";
-        }, 5000); // 5000ms = 5 seconds
+        let countdown = 10;
+        const timerElement = document.getElementById("timer");
+
+        const updateTimer = () => {
+            countdown--;
+            if (countdown > 0) {
+                timerElement.textContent = `Redirecting in ${countdown} seconds...`;
+            } else {
+                timerElement.textContent = "Redirecting now...";
+                window.location.href = "https://sarthakdhole.com/index.html";
+            }
+        };
+
+        // Update the timer every second
+        setInterval(updateTimer, 1000);
     </script>
 </body>
 </html>
